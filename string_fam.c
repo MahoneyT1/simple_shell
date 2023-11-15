@@ -6,20 +6,24 @@
  * @source: The source file to concats from
  * Return: The processed string
  */
-char *_strcat(char *destination, char *source) {
-  int i = 0, j = 0;
+char *_strcat(char *destination, char *source)
+{
+	int i = 0, j = 0;
 
-  while (destination[i]) {
-    i++;
-  }
-  while (source[j]) {
-    destination[i] = source[j];
-    i++;
-    j++;
-  }
-  destination[i] = '\0';
+	while (destination[i])
+	{
+		i++;
+	}
 
-  return (destination);
+	while (source[j])
+	{
+		destination[i] = source[j];
+		i++;
+		j++;
+	}
+	destination[i] = '\0';
+
+	return (destination);
 }
 
 /**
@@ -29,16 +33,18 @@ char *_strcat(char *destination, char *source) {
  *
  * Return:destination
  */
-char *_strcpy(char *destination, char *source) {
-  int a = 0;
+char *_strcpy(char *destination, char *source)
+{
+	int a = 0;
 
-  while (*(source + a)) {
-    *(destination + a) = *(source + a);
-    a++;
-  }
-  destination[a] = '\0';
+	while (*(source + a))
+	{
+		*(destination + a) = *(source + a);
+		a++;
+	}
+	destination[a] = '\0';
 
-  return (destination);
+	return (destination);
 }
 
 /**
@@ -48,14 +54,16 @@ char *_strcpy(char *destination, char *source) {
  * Return: returns the length of the string
  */
 
-int _strlen(char *string) {
-  int a = 0;
+int _strlen(char *string)
+{
+	int a = 0;
 
-  while (*(string + a) != '\0') {
-    a++;
-  }
+	while (*(string + a) != '\0')
+	{
+		a++;
+	}
 
-  return (a);
+	return (a);
 }
 
 /**
@@ -66,20 +74,25 @@ int _strlen(char *string) {
  *
  * Return: The first difference or 0 if none
  */
-int _strncmp(char *string1, char *string2, int n) {
-  int i = 0, difference = 0;
+int _strncmp(char *string1, char *string2, int n)
+{
+	int i = 0, difference = 0;
 
-  while (string1[i] && string2[i] && (i < n)) {
-    if (string1[i] == string2[i]) {
-      i++;
-      continue;
-    } else {
-      difference = string1[i] - string2[i];
-      break;
-    }
-  }
+	while (string1[i] && string2[i] && (i < n))
+	{
+		if (string1[i] == string2[i])
+		{
+			i++;
+			continue;
+		}
+		else
+		{
+			difference = string1[i] - string2[i];
+			break;
+		}
+	}
 
-  return (difference);
+	return (difference);
 }
 
 /**
@@ -89,18 +102,23 @@ int _strncmp(char *string1, char *string2, int n) {
  *
  * Return: The number of differences
  */
-int _strcmp(char *string1, char *string2) {
-  int i = 0, difference = 0;
+int _strcmp(char *string1, char *string2)
+{
+	int i = 0, difference = 0;
 
-  while (string1[i] && string2[i]) {
-    if (string1[i] == string2[i]) {
-      i++;
-      continue;
-    } else {
-      difference = string1[i] - string2[i];
-      break;
-    }
-  }
+	while (string1[i] && string2[i])
+	{
+		if (string1[i] == string2[i])
+		{
+			i++;
+			continue;
+		}
+		else
+		{
+			difference = string1[i] - string2[i];
+			break;
+		}
+	}
 
-  return (difference);
+	return (difference);
 }
